@@ -530,14 +530,14 @@ h6 {
   bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 50px;
-  height: 50px;
-  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
   transition: all 0.4s;
 }
 
 .scroll-top i {
-  font-size: 30px;
+  font-size: 40px;
   color: var(--contrast-color);
   line-height: 0;
 }
@@ -545,12 +545,44 @@ h6 {
 .scroll-top:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
+  scale : 1.2
 }
 
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
 }
+
+.scroll-top1 {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 60px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.scroll-top1 i {
+  font-size: 30px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top1:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top1.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -724,14 +756,16 @@ section,
   line-height: 1;
   margin: 10px;
   animation-delay: 0.8s;
-  color: var(--default-color);
-  border: 2px solid var(--accent-color);
+  color: #fff;
+  border: 2px solid var(--default-color);
+  background-color: var(--background-color);
 }
 
 .hero .btn-get-started:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
   text-decoration: none;
+  scale: 1.2;
 }
 
 @media (min-width: 1024px) {
@@ -945,7 +979,9 @@ section,
 
 @media (max-width: 640px) {
   .clients .client-logo img {
-    padding: 20px;
+    padding: 10px;        /* lebih kecil biar logonya tidak kepotong */
+    max-width: 100%;      /* biar gambar lebih besar */
+    opacity: 0.8;         /* opsional, biar tetap terlihat jelas */
   }
 }
 
@@ -1239,6 +1275,10 @@ section,
   }
 }
 
+
+
+
+
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
@@ -1497,7 +1537,7 @@ section,
 }
 
 .download-img {
-  max-width: 900px; /* gambar lebih kecil */
+  max-width: 1000px; /* gambar lebih kecil */
   height: auto;
 }
 
@@ -1534,6 +1574,33 @@ section,
 
 .download-buttons .btn:hover {
   opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .download-img {
+    max-width: 100%; /* otomatis menyesuaikan lebar layar */
+  }
+
+  .download-buttons .btn {
+    font-size: 0.9rem; 
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-img {
+    max-width: 80%; /* lebih kecil di HP kecil */
+  }
+
+  .download-buttons {
+    flex-direction: column; /* tombol jadi bertumpuk */
+    gap: 10px;
+  }
+
+  .download-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*--------------------------------------------------------------

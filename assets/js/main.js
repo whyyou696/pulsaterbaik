@@ -74,28 +74,36 @@
     });
   }
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector(".scroll-top");
+/**
+ * Scroll top button
+ */
+let scrollTop = document.querySelector(".scroll-top");
 
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
-    }
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100
+      ? scrollTop.classList.add("active")
+      : scrollTop.classList.remove("active");
   }
-  scrollTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+}
+
+scrollTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  // Scroll ke atas dengan smooth
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 
-  window.addEventListener("load", toggleScrollTop);
-  document.addEventListener("scroll", toggleScrollTop);
+  // Setelah delay, buka link Telegram
+  setTimeout(() => {
+    window.open("https://t.me/Pulsaterbaik", "_blank"); 
+  }, 800); // delay 0.8 detik (sesuai durasi smooth scroll)
+});
+
+window.addEventListener("load", toggleScrollTop);
+document.addEventListener("scroll", toggleScrollTop);
+
 
   /**
    * Animation on scroll function and init
