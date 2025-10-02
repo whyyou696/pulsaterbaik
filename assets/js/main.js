@@ -97,8 +97,8 @@ scrollTop.addEventListener("click", (e) => {
 
   // Setelah delay, buka link Telegram
   setTimeout(() => {
-    window.open("https://t.me/Pulsaterbaik", "_blank"); 
-  }, 800); // delay 0.8 detik (sesuai durasi smooth scroll)
+    window.open("https://t.me/cspulsaterbaik", "_blank"); 
+  }, 300); // delay 0.3 detik (sesuai durasi smooth scroll)
 });
 
 window.addEventListener("load", toggleScrollTop);
