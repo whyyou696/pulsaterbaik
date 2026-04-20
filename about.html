@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Best Multi Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+      align-items: center;
+      justify-items: center;
+      padding: 50px;
+      background: var(--bg-panel);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--glow-sm);
+    }
+
+    .clients-grid img {
+      width: 100%;
+      max-width: 140px;
+      height: 70px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .clients-grid img:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.15) translateY(-5px);
+    }
+
+    @media (max-width: 992px) {
+      .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_best1.png" alt="Best Multi Payment"
+          style="height: 80px; max-width: 100%; object-fit: contain;">
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="about.html" class="nav-link active">Tentang Kami</a></li>
+        <li><a href="services.html" class="nav-link">Layanan</a></li>
+        <li><a href="technology.html" class="nav-link">Teknologi</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        <li><a href="https://mitra.pulsaterbaik.id/" class="btn btn-primary btn-nav">Gabung sebagai Mitra</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+
+  <section class="section" style="padding-top: 150px; position: relative; overflow: hidden;">
+    <!-- Animated Orbs -->
+    <div class="orb-1" style="position: absolute; top: 10%; right: 10%; animation: float 6s ease-in-out infinite;">
+    </div>
+    <div class="orb-2"
+      style="position: absolute; bottom: -10%; left: -5%; animation: float 8s ease-in-out infinite reverse;"></div>
+
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 60px;">
+        <div class="reveal">
+          <h1 style="text-align: left; margin-bottom: 30px;">Tentang <span class="text-gradient">Best Multi
+              Payment</span>
+          </h1>
+          <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">Best Multi
+            Payment adalah solusi digital terpercaya untuk layanan Host-To-Host (H2H) Server, yang hadir untuk menjawab
+            kebutuhan transaksi cepat, aman, dan stabil di era modern. Kami berdiri dengan satu visi: menghadirkan
+            layanan terbaik yang mampu menjadi fondasi pertumbuhan bisnis digital di Indonesia.</p>
+          <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">Sejak awal,
+            kami percaya bahwa kecepatan dan keandalan sistem adalah kunci utama dalam membangun kepercayaan mitra.
+            Karena itu, setiap perangkat dan infrastruktur kami telah melalui uji coba berlapis untuk memastikan
+            performa maksimal. Dengan dukungan layanan penuh 24 jam non-stop, kami tidak hanya menjadi penyedia
+            teknologi, tetapi juga partner setia yang siap mendampingi perjalanan bisnis Anda kapan saja.</p>
+          <p style="margin: 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">Kami juga berkomitmen
+            untuk terus melakukan inovasi berkelanjutan agar layanan yang kami berikan selalu relevan dengan
+            perkembangan teknologi dan kebutuhan pasar digital. Lebih dari sekadar transaksi, Best Multi Payment hadir
+            untuk
+            menciptakan ekosistem yang mendukung pertumbuhan bisnis, memberikan rasa aman, dan memastikan pengalaman
+            terbaik bagi seluruh mitra.</p>
+        </div>
+
+        <!-- Animated Graphic -->
+        <div class="hero-graphic reveal"
+          style="position: relative; height: 500px; display: flex; justify-content: center; align-items: center;">
+          <div class="glass-panel"
+            style="width: 80%; height: 60%; position: absolute; animation: float 6s ease-in-out infinite; border-color: rgba(0, 240, 255, 0.4); box-shadow: var(--glow-md);">
+            <!-- UI simulation -->
+            <div style="display: flex; gap: 8px; margin-bottom: 25px;">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+            </div>
+            <div
+              style="height: 12px; width: 50%; background: rgba(0,240,255,0.2); border-radius: 6px; margin-bottom: 15px;">
+            </div>
+            <div
+              style="height: 12px; width: 70%; background: rgba(0,102,255,0.2); border-radius: 6px; margin-bottom: 40px;">
+            </div>
+
+            <div style="display: flex; gap: 20px; align-items: center;">
+              <div
+                style="width: 50px; height: 50px; border-radius: 50%; background: var(--grad-primary); animation: spin 4s linear infinite; box-shadow: var(--glow-sm);">
+              </div>
+              <div>
+                <div
+                  style="height: 10px; width: 120px; background: rgba(0,0,0,0.3); border-radius: 5px; margin-bottom: 8px;">
+                </div>
+                <div style="height: 8px; width: 80px; background: rgba(0,0,0,0.1); border-radius: 4px;"></div>
+              </div>
+            </div>
+
+            <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div
+                style="height: 60px; background: rgba(0,240,255,0.1); border-radius: var(--border-radius-sm); border: 1px solid rgba(0,240,255,0.2);">
+              </div>
+              <div
+                style="height: 60px; background: rgba(0,102,255,0.1); border-radius: var(--border-radius-sm); border: 1px solid rgba(0,102,255,0.2);">
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating UI Element 1 -->
+          <div class="glass-panel"
+            style="position: absolute; right: -10px; top: 60px; width: 220px; padding: 20px; animation: float 5s ease-in-out infinite 1s; z-index: 2; border-color: var(--neon-blue); background: var(--bg-panel-hover);">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div
+                style="font-size: 2rem; background: rgba(0,102,255,0.1); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                ⚡</div>
+              <div>
+                <h4 style="margin: 0; color: var(--text-primary); font-size: 0.9rem;">Server Uptime</h4>
+                <p style="margin: 0; color: var(--neon-cyan); font-weight: 800; font-size: 1.2rem;">99.99%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating UI Element 2 -->
+          <div class="glass-panel"
+            style="position: absolute; left: -10px; bottom: 60px; width: 240px; padding: 20px; animation: float 7s ease-in-out infinite 0.5s; z-index: 2; border-color: var(--neon-cyan); background: var(--bg-panel-hover);">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div
+                style="font-size: 2rem; background: rgba(0,240,255,0.1); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                🛡️</div>
+              <div>
+                <h4 style="margin: 0; color: var(--text-primary); font-size: 0.9rem;">Security Status</h4>
+                <p style="margin: 0; color: var(--neon-blue); font-weight: 800; font-size: 1.1rem;">Enterprise Grade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="text-center reveal" style="margin-bottom: 50px;">Keunggulan Best Multi Payment</h2>
+      <div class="grid grid-2">
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan);">Layanan 24/7 Non-Stop</h3>
+            <p>Nikmati kenyamanan transaksi tanpa batas waktu. Tim support dan server kami selalu aktif 24 jam setiap
+              hari, siap mendukung kebutuhan bisnis Anda kapan saja.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan);">Server Cepat & Stabil</h3>
+            <p>Dengan infrastruktur handal yang sudah melalui uji coba ketat, kami menjamin kecepatan dan stabilitas
+              server untuk setiap transaksi agar bisnis Anda berjalan lancar tanpa hambatan.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.2s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan);">Keamanan Terpercaya</h3>
+            <p>Keamanan data dan transaksi adalah prioritas utama. Sistem kami dirancang dengan proteksi maksimal agar
+              mitra dan pelanggan merasa aman dan terlindungi.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.3s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan);">Daftar Produk Kami</h3>
+            <p>Kami menyediakan berbagai macam produk pulsa terbaik untuk memenuhi kebutuhan Anda. Dari pulsa murah
+              hingga pulsa besar, kami memiliki produk yang sesuai dengan kebutuhan Anda, dan kami siap melayani Anda
+              dengan layanan terbaik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="text-center reveal" style="margin-bottom: 50px;">Klien & Mitra Kami</h2>
+      <div class="clients-grid reveal">
+        <img src="assets/clients/axis.png" alt="Axis">
+        <img src="assets/clients/byu.png" alt="ByU">
+        <img src="assets/clients/dana.png" alt="Dana">
+        <img src="assets/clients/e-money.png" alt="e-Money">
+        <img src="assets/clients/gopay.png" alt="GoPay">
+        <img src="assets/clients/indosat.png" alt="Indosat">
+        <img src="assets/clients/ovo.png" alt="OVO">
+        <img src="assets/clients/pln.png" alt="PLN">
+        <img src="assets/clients/shopay.png" alt="ShopeePay">
+        <img src="assets/clients/smartfren.png" alt="Smartfren">
+        <img src="assets/clients/telkomsel.png" alt="Telkomsel">
+        <img src="assets/clients/three.png" alt="Tri">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <img src="assets/logo_best2.png" alt="Best Multi Payment"
+              style="height: 140px; max-width: 100%; object-fit: contain;">
+          </div>
+          <p class="footer-desc">Infrastruktur keuangan generasi baru yang menyediakan solusi H2H, PPOB, dan Payment
+            Gateway.</p>
+        </div>
+        <div>
+          <h4>Solusi</h4>
+          <ul>
+            <li><a href="services.html">Server H2H</a></li>
+            <li><a href="services.html">Payment Gateway</a></li>
+            <li><a href="services.html">Agregator PPOB</a></li>
+            <li><a href="technology.html">Developer API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Perjanjian SLA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Best Multi Payment. Hak cipta dilindungi.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Floating Telegram Widget -->
+  <a href="https://t.me/csbestmp" target="_blank" class="floating-telegram" aria-label="Chat with us on Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+    </svg>
+  </a>
+</body>
+
+</html>

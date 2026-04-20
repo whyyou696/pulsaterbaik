@@ -2,448 +2,474 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Pulsa Terbaik | Services </title>
-   <!-- Deskripsi singkat (meta description) -->
-    <meta
-      name="description"
-      content="PULSA TERBAIK adalah perusahaan digital yang bergerak di bidang pendistribusian produk pulsa, paket data internet, dan Payment Point Online Bank (PPOB) dengan layanan H2H yang cepat dan terpercaya."
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Best Multi Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page Specific Styles: Products Flow Diagram */
+    .flow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 80px 0;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 1200px;
+    }
 
-    <!-- SEO tambahan -->
-    <meta
-      name="keywords"
-      content="pulsa terbaik, paket data internet, PPOB, server H2H, host-to-host, digital solution"
-    />
-    <meta name="author" content="PULSA TERBAIK" />
+    @media (max-width: 992px) {
+      .flow-container {
+        flex-direction: column;
+        gap: 60px;
+      }
+    }
 
-    <!-- Open Graph untuk preview di WhatsApp, Facebook -->
-    <meta property="og:title" content="PULSA TERBAIK" />
-    <meta
-      property="og:description"
-      content="Distribusi pulsa, paket data internet, dan PPOB dengan layanan H2H cepat dan terpercaya."
-    />
-    <meta property="og:url" content="https://pulsaterbaik.id" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://photos.app.goo.gl/d7xNsiXzHiXTALYk8"
-    />
-  <!-- Favicons -->
-  <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
-    <meta name="theme-color" content="#ffffff" />
-    
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    .node {
+      width: 220px;
+      padding: 30px 20px;
+      background: var(--bg-panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: var(--border-radius-lg);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      animation: floatNode 6s ease-in-out infinite;
+      transform: translateZ(20px);
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    .node:nth-child(2) {
+      animation-delay: 1s;
+      border-color: rgba(0, 240, 255, 0.4);
+      box-shadow: var(--glow-md);
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    .node:nth-child(3) {
+      animation-delay: 2s;
+      border-color: rgba(0, 102, 255, 0.4);
+    }
 
-  <!-- =======================================================
-  * Template Name: Avilon
-  * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .node:nth-child(4) {
+      animation-delay: 3s;
+      border-color: rgba(138, 43, 226, 0.4);
+    }
+
+    .node-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: rgba(0, 240, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+
+    .node h4 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .node p {
+      font-size: 0.85rem;
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .connection-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    .data-flow {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: var(--neon-cyan);
+      border-radius: 50%;
+      box-shadow: var(--glow-sm);
+      animation: dataMove 4s linear infinite;
+    }
+
+    .data-flow:nth-child(2) {
+      animation-delay: 2s;
+      background: var(--neon-blue);
+    }
+
+    @keyframes floatNode {
+      0% {
+        transform: translateY(0) translateZ(20px) rotateX(5deg);
+      }
+
+      50% {
+        transform: translateY(-15px) translateZ(40px) rotateX(-5deg);
+      }
+
+      100% {
+        transform: translateY(0) translateZ(20px) rotateX(5deg);
+      }
+    }
+
+    @keyframes dataMove {
+      0% {
+        left: 5%;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        left: 95%;
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .connection-line {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+
+      @keyframes dataMove {
+        0% {
+          top: 5%;
+          opacity: 0;
+          left: -3px;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          top: 95%;
+          opacity: 0;
+          left: -3px;
+        }
+      }
+    }
+  </style>
 </head>
 
-<body class="service-details-page">
+<body>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
-      >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/logo-navbar.png" alt="" class="logo"/>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-        <div
-          id="hero-carousel"
-          data-bs-interval="5000"
-          class="container carousel carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="carousel-container">
-              <h2 class="animate__animated animate__fadeInDown">
-                Services<span> Details</span>
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <svg
-          class="hero-waves"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28 "
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <path
-              id="wave-path"
-              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-            ></path>
-          </defs>
-          <g class="wave1">
-            <use xlink:href="#wave-path" x="50" y="3"></use>
-          </g>
-          <g class="wave2">
-            <use xlink:href="#wave-path" x="50" y="0"></use>
-          </g>
-          <g class="wave3">
-            <use xlink:href="#wave-path" x="50" y="9"></use>
-          </g>
-        </svg>
-      </section>
-      <!-- /Hero Section -->
-
-  <main class="main">
-
-     <!-- Features 2 Section -->
-      <section id="features-2" class="features section features-2">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Daftar Top Produk Kami</h2>
-          <p>
-            Berikut daftar produk kami yang dapat memenuhi kebutuhan Anda.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4 justify-content-between">
-            <div
-              class="features-image col-lg-4 d-flex align-items-center"
-              data-aos="fade-up"
-            >
-              <img src="assets/img/features.png" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-7 d-flex flex-column justify-content-center">
-
-              <div
-                class="features-item d-flex mt-5"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="bi bi-phone-flip flex-shrink-0"></i>
-                <div>
-                  <h4>Pulsa & Paket Data</h4>
-                </div>
-              </div>
-              <!-- End Features Item-->
-
-              <div
-                class="features-item d-flex mt-5"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="bi bi-broadcast flex-shrink-0"></i>
-                <div>
-                  <h4>Listrik</h4>                  
-                </div>
-              </div>
-              <!-- End Features Item-->
-
-              <div
-                class="features-item d-flex mt-5"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="bi bi-camera-reels flex-shrink-0"></i>
-                <div>
-                  <h4>Pascabayar</h4>
-                </div>
-              </div>
-              <!-- End Features Item-->
-
-               <div
-                class="features-item d-flex mt-5"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="bi bi-controller flex-shrink-0"></i>
-                <div>
-                  <h4>Voucher Game</h4>
-                </div>
-              </div>
-              <!-- End Features Item-->
-
-               <div
-                class="features-item d-flex mt-5"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="bi bi-quote flex-shrink-0"></i>
-                <div>
-                  <h4>Lainnya</h4>
-                </div>
-              </div>
-              <!-- End Features Item-->
-          </div>
-        </div>
-      </section>
-      <!-- /Features 2 Section -->
-
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Kenapa Memilih <b>Pulsa Terbaik?</b></h2>
-          <p>
-            Karena kami selalu mengutamakan 6 poin penting yang berpengaruh terhadap kepuasan pelanggan kami.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-stopwatch"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Layanan 24/7 Non-Stop</h3>
-                </a>
-                <p>Nikmati kenyamanan transaksi tanpa batas waktu. Tim support dan server kami selalu aktif 24 jam setiap hari, siap mendukung kebutuhan bisnis Anda kapan saja.</p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Server Cepat & Stabil</h3>
-                </a>
-                <p>
-                  Dengan infrastruktur handal yang sudah melalui uji coba ketat, kami menjamin kecepatan dan stabilitas server untuk setiap transaksi agar bisnis Anda berjalan lancar tanpa hambatan.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-shield-check"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Keamanan Terpercaya</h3>
-                </a>
-                <p>
-                  Keamanan data dan transaksi adalah prioritas utama. Sistem kami dirancang dengan proteksi maksimal agar mitra dan pelanggan merasa aman dan terlindungi.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Teknologi Inovatif</h3>
-                </a>
-                <p>
-                  Kami selalu mengembangkan sistem dengan teknologi terbaru untuk memastikan layanan yang up-to-date dan sesuai kebutuhan pasar digital.
-                </p>
-                <a class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-hand-thumbs-up"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Dukungan Mitra Bisnis</h3>
-                </a>
-                <p>
-                  Bukan sekadar layanan, kami hadir sebagai partner terpercaya yang membantu perkembangan bisnis Anda melalui solusi praktis dan profesional.
-                </p>
-                <a class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-bar-chart"></i>
-                </div>
-                <a class="stretched-link">
-                  <h3>Skalabilitas Tanpa Batas</h3>
-                </a>
-                <p>
-                  Infrastruktur server kami dirancang agar dapat beradaptasi dengan pertumbuhan bisnis, dari skala kecil hingga besar, tanpa mengurangi performa.
-                </p>
-                <a class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-      
-      <!-- Call To Action Section -->
-      <section
-        id="call-to-action"
-        class="call-to-action section dark-background"
-      >
-        <img src="assets/img/cta-bg2.png" alt="" />
-
-        <div class="container">
-          <div
-            class="row justify-content-center"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-           <div class="col-xl-10">
-              <div class="text-center">
-                <h3>Informasi & Layanan H2H (Host-to-Host)</h3>
-                <p>
-                  Mau integrasi langsung ke server kami biar transaksi lebih gampang dan lancar? <br/>Customer Service kami siap bantu kamu kapan aja
-                </p>
-                <a class="cta-btn bi bi-headset" href="https://t.me/cspulsaterbaik"> Hubungi Kami </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Call To Action Section -->
-
-
-  </main>
-
-  
-<!-- Download Section -->
-<section class="download-section">
-  <div class="download-container">
-    <img src="assets/img/banner-download.png" alt="Download Banner" class="download-img" />
-    <div class="download-buttons">
-      <a href="comingsoon.html" class="btn appstore bi bi-apple"> App Store</a>
-      <a href="comingsoon.html" class="btn playstore bi bi-google-play"> Google Play</a>
-      <a href="https://pulsaterbaik.wlabel.id/" class="btn web bi bi-google"> Web Access</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_best1.png" alt="Best Multi Payment"
+          style="height: 80px; max-width: 100%; object-fit: contain;">
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="services.html" class="nav-link active">Layanan</a></li>
+        <li><a href="technology.html" class="nav-link">Teknologi</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        <li><a href="https://mitra.pulsaterbaik.id/" class="btn btn-primary btn-nav">Gabung sebagai Mitra</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
+  <!-- Background -->
+  <div class="bg-grid"></div>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0b7bd6" fill-opacity="1" d="M0,32L30,53.3C60,75,120,117,180,133.3C240,149,300,139,360,117.3C420,96,480,64,540,64C600,64,660,96,720,128C780,160,840,192,900,176C960,160,1020,96,1080,96C1140,96,1200,160,1260,181.3C1320,203,1380,181,1410,170.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+  <!-- Hero Section -->
+  <section class="section" style="padding-top: 150px; text-align: center;">
+    <div class="container reveal">
+      <h1>Layanan <span class="text-gradient">Kami</span></h1>
+      <p style="max-width: 600px; margin: 0 auto;">Solusi API dan server komprehensif untuk ekosistem pembayaran digital
+        Anda.</p>
+    </div>
+  </section>
 
-<!-- Footer Section -->
-<footer id="footer" class="footer dark-background">
-      <div class="container">
-        <img src="assets/img/footer-logo.png" alt="" class="logo" />
-        <p>
-          Pulsa Terbaik adalah solusi digital terpercaya untuk layanan Host-To-Host (H2H) Server,<br> yang hadir untuk menjawab kebutuhan transaksi cepat, aman, dan stabil di era modern.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a href="https://www.instagram.com/pulsaterbaik/"><i class="bi bi-instagram"></i></a>
-          <a href="mailto:pulsaterbaik.id@gmail.com?subject=Butuh%20Bantuan&body=Halo%20Mitra%20Terbaik,%0ASaya%20ingin%20bertanya%20tentang..."><i class="bi bi-envelope"></i></a>
-          <a href="https://t.me/cspulsaterbaik"><i class="bi bi-send"></i></a>
-          <a href="https://wa.me/6285102633377"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://pulsaterbaik.wlabel.id/"><i class="bi bi-google"></i></a>
-          <a href=""><i class="bi bi-apple"></i></a>
-          <a href=""><i class="bi bi-google-play"></i></a>
+  <!-- Services Grid -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <div class="logo-icon" style="margin-bottom: 20px;"></div>
+            <h3 style="color: var(--neon-cyan);">Host-to-Host (H2H)</h3>
+            <p>Integrasi server langsung untuk agregator yang membutuhkan latensi ultra-rendah dan throughput transaksi
+              tinggi. Terhubung dengan lancar ke infrastruktur inti kami.</p>
+            <ul style="margin-top: 15px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">✓ Dukungan ISO 8583 / JSON / XML</li>
+              <li style="margin-bottom: 8px;">✓ Jalur Koneksi Khusus</li>
+              <li>✓ Arsitektur Ketersediaan Tinggi</li>
+            </ul>
+          </div>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <span>© Copyright <strong class="sitename">Pulsa Terbaik</strong> 2025 All Right Reserved</span>
+
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <div class="logo-icon" style="margin-bottom: 20px; background: rgba(0, 102, 255, 0.8);"></div>
+            <h3 style="color: var(--neon-blue);">Payment Gateway</h3>
+            <p>Terima pembayaran dengan mudah melalui berbagai saluran via API tunggal yang terpadu dengan webhook
+              real-time untuk pembaruan status transaksi instan.</p>
+            <ul style="margin-top: 15px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">✓ QRIS Dinamis & Statis</li>
+              <li style="margin-bottom: 8px;">✓ E-Wallet (OVO, GoPay, Dana, LinkAja)</li>
+              <li>✓ Virtual Account (Mandiri, BCA, BRI, BNI)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <div class="logo-icon" style="margin-bottom: 20px; background: rgba(138, 43, 226, 0.8);"></div>
+            <h3 style="color: var(--neon-purple);">Agregator PPOB</h3>
+            <p>Akses ribuan produk digital yang terintegrasi secara native ke dalam platform kami. Jual kembali produk
+              prabayar dan pascabayar dengan margin agresif.</p>
+            <ul style="margin-top: 15px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">✓ Pulsa Prabayar & Paket Data</li>
+              <li style="margin-bottom: 8px;">✓ Token PLN & Pascabayar</li>
+              <li>✓ Voucher Game & Hiburan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <div class="logo-icon" style="margin-bottom: 20px; background: rgba(0, 240, 255, 0.3);"></div>
+            <h3 style="color: var(--text-primary);">Solusi White Label</h3>
+            <p>Luncurkan platform pembayaran Anda sendiri dalam hitungan minggu, bukan bulan. Manfaatkan mesin backend
+              tangguh kami sambil mempertahankan kendali penuh atas merek dan UI Anda.</p>
+            <ul style="margin-top: 15px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">✓ Domain & Branding Kustom</li>
+              <li style="margin-bottom: 8px;">✓ Dasbor Admin</li>
+              <li>✓ Manajemen Agen Bertingkat</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Products -->
+  <section class="section">
+    <div class="container text-center reveal">
+      <h2 style="margin-bottom: 20px;">Daftar Top <span class="text-gradient">Produk Kami</span></h2>
+      <p style="margin-bottom: 40px;">Berikut daftar produk kami yang dapat memenuhi kebutuhan Anda.</p>
+
+      <div class="flow-container reveal" style="margin-top: 30px;">
+        <!-- Connecting Line & Data Packets -->
+        <div class="connection-line d-none-mobile">
+          <div class="data-flow"></div>
+          <div class="data-flow"></div>
+        </div>
+
+        <!-- Node 1 -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-cyan); background:rgba(0,240,255,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h4 style="color:var(--neon-cyan);">Pulsa & Data</h4>
+          <p>Semua Operator</p>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-blue); background:rgba(0,102,255,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h4 style="color:var(--neon-blue);">Listrik</h4>
+          <p>Token & Tagihan</p>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-purple); background:rgba(138,43,226,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h4 style="color:var(--neon-purple);">Pascabayar</h4>
+          <p>BPJS, PDAM, WiFi</p>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-cyan); background:rgba(0,240,255,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+              <path d="M6 12h4"></path>
+              <path d="M8 10v4"></path>
+              <path d="M15 13h.01"></path>
+              <path d="M18 11h.01"></path>
+            </svg>
+          </div>
+          <h4 style="color:var(--text-primary);">Voucher Game</h4>
+          <p>Top Up Otomatis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="reveal text-center" style="margin-bottom: 50px;">
+        <h2>Kenapa Memilih <span class="text-gradient">Best Multi Payment?</span></h2>
+        <p style="max-width: 700px; margin: 0 auto;">Karena kami selalu mengutamakan 6 poin penting yang berpengaruh
+          terhadap kepuasan pelanggan kami.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Layanan 24/7 Non-Stop</h3>
+            <p>Nikmati kenyamanan transaksi tanpa batas waktu. Tim support dan server kami selalu aktif 24 jam setiap
+              hari, siap mendukung kebutuhan bisnis Anda kapan saja.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Server Cepat & Stabil</h3>
+            <p>Dengan infrastruktur handal yang sudah melalui uji coba ketat, kami menjamin kecepatan dan stabilitas
+              server untuk setiap transaksi agar bisnis Anda berjalan lancar tanpa hambatan.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.2s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Keamanan Terpercaya</h3>
+            <p>Keamanan data dan transaksi adalah prioritas utama. Sistem kami dirancang dengan proteksi maksimal agar
+              mitra dan pelanggan merasa aman dan terlindungi.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Teknologi Inovatif</h3>
+            <p>Kami selalu mengembangkan sistem dengan teknologi terbaru untuk memastikan layanan yang up-to-date dan
+              sesuai kebutuhan pasar digital.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Dukungan Mitra Bisnis</h3>
+            <p>Bukan sekadar layanan, kami hadir sebagai partner terpercaya yang membantu perkembangan bisnis Anda
+              melalui solusi praktis dan profesional.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.2s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 15px;">Skalabilitas Tanpa Batas</h3>
+            <p>Infrastruktur server kami dirancang agar dapat beradaptasi dengan pertumbuhan bisnis, dari skala kecil
+              hingga besar, tanpa mengurangi performa.</p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="section">
+    <div class="container text-center reveal">
+      <h2 style="margin-bottom: 30px;">Tidak yakin solusi mana yang sesuai dengan kebutuhan Anda?</h2>
+      <div class="magnetic-wrap">
+        <a href="contact.html" class="btn btn-primary">Bicara dengan Pakar</a>
+      </div>
+    </div>
+  </section>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <img src="assets/logo_best2.png" alt="Best Multi Payment"
+              style="height: 140px; max-width: 100%; object-fit: contain;">
+          </div>
+          <p class="footer-desc">Infrastruktur keuangan generasi baru yang menyediakan solusi H2H, PPOB, dan Payment
+            Gateway.</p>
+        </div>
+        <div>
+          <h4>Solusi</h4>
+          <ul>
+            <li><a href="services.html">Server H2H</a></li>
+            <li><a href="services.html">Payment Gateway</a></li>
+            <li><a href="services.html">Agregator PPOB</a></li>
+            <li><a href="technology.html">Developer API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Perjanjian SLA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Best Multi Payment. Hak cipta dilindungi.
+      </div>
+    </div>
+  </footer>
 
-    
-<!-- Scroll Top -->
-   <a
-  href="https://t.me/cspulsaterbaik"
-  id="scroll-top"
-  class="scroll-top d-flex align-items-center justify-content-center"
->
-  <i class="bi bi-headset"></i>
-</a>
-
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="js/script.js"></script>
+  <!-- Floating Telegram Widget -->
+  <a href="https://t.me/csbestmp" target="_blank" class="floating-telegram" aria-label="Chat with us on Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+    </svg>
+  </a>
 </body>
 
 </html>

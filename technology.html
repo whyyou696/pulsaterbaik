@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology - Best Multi Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page Specific Styles: H2H Visual Diagram */
+    .tech-hero {
+      padding: 150px 0 100px;
+      text-align: center;
+      background: radial-gradient(circle at top, rgba(0,240,255,0.1), transparent 50%);
+    }
+
+    .flow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 80px 0;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 1200px;
+    }
+
+    /* Mobile handling for flow */
+    @media (max-width: 992px) {
+      .flow-container {
+        flex-direction: column;
+        gap: 60px;
+      }
+    }
+
+    .node {
+      width: 200px;
+      padding: 30px 20px;
+      background: var(--bg-panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--border-radius-lg);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      animation: floatNode 6s ease-in-out infinite;
+      transform: translateZ(20px);
+    }
+    
+    .node:nth-child(2) { animation-delay: 1s; border-color: rgba(0,240,255,0.4); box-shadow: var(--glow-md); }
+    .node:nth-child(3) { animation-delay: 2s; border-color: rgba(0,102,255,0.4); }
+    .node:nth-child(4) { animation-delay: 3s; }
+
+    .node-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: rgba(0,240,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0,240,255,0.3);
+    }
+
+    .node h4 { margin-bottom: 5px; color: var(--text-primary); }
+    .node p { font-size: 0.85rem; margin: 0; color: var(--text-secondary); }
+
+    /* Connection Lines */
+    .connection-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(0,0,0,0.05);
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    .data-flow {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: var(--neon-cyan);
+      border-radius: 50%;
+      box-shadow: var(--glow-sm);
+      animation: dataMove 4s linear infinite;
+    }
+    .data-flow:nth-child(2) { animation-delay: 2s; background: var(--neon-blue); }
+
+    @keyframes floatNode {
+      0% { transform: translateY(0) translateZ(20px) rotateX(5deg); }
+      50% { transform: translateY(-15px) translateZ(40px) rotateX(-5deg); }
+      100% { transform: translateY(0) translateZ(20px) rotateX(5deg); }
+    }
+
+    @keyframes dataMove {
+      0% { left: 5%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: 95%; opacity: 0; }
+    }
+
+    /* Override for mobile line */
+    @media (max-width: 992px) {
+      .connection-line {
+        top: 0; left: 50%; width: 2px; height: 100%; transform: translateX(-50%);
+      }
+      @keyframes dataMove {
+        0% { top: 5%; opacity: 0; left: -3px; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 95%; opacity: 0; left: -3px; }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_best1.png" alt="Best Multi Payment" style="height: 80px; max-width: 100%; object-fit: contain;">
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="services.html" class="nav-link">Layanan</a></li>
+        <li><a href="technology.html" class="nav-link active">Teknologi</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        <li><a href="https://mitra.pulsaterbaik.id/" class="btn btn-primary btn-nav">Gabung sebagai Mitra</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Background -->
+  <div class="bg-grid"></div>
+
+  <!-- Tech Hero -->
+  <section class="tech-hero">
+    <div class="container reveal">
+      <h1>Mesin di <span class="text-gradient">Dalamnya</span></h1>
+      <p style="max-width: 600px; margin: 0 auto;">Rasakan infrastruktur Host-to-Host (H2H) paling tangguh di industri yang dirancang untuk latensi mikrodetik.</p>
+    </div>
+  </section>
+
+  <!-- H2H Flow Diagram Section -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="reveal text-center" style="margin-bottom: 50px;">
+        <h2 style="font-size: 2rem;">Alur Visual H2H</h2>
+      </div>
+
+      <div class="flow-container reveal">
+        <!-- Connecting Line & Data Packets -->
+        <div class="connection-line d-none-mobile">
+          <div class="data-flow"></div>
+          <div class="data-flow"></div>
+        </div>
+
+        <!-- Node 1: Client -->
+        <div class="node">
+          <div class="node-icon">📱</div>
+          <h4>1. Klien</h4>
+          <p>Memulai payload trx</p>
+        </div>
+
+        <!-- Node 2: API Gateway -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-cyan); background:rgba(0,240,255,0.2);">🛡️</div>
+          <h4 style="color:var(--neon-cyan);">2. API Gateway</h4>
+          <p>Autentikasi & Load Balancing</p>
+        </div>
+
+        <!-- Node 3: Core Server -->
+        <div class="node">
+          <div class="node-icon" style="border-color:var(--neon-blue); background:rgba(0,102,255,0.2);">⚡</div>
+          <h4 style="color:var(--neon-blue);">3. Server Inti</h4>
+          <p>Pemrosesan & Buku Besar</p>
+        </div>
+
+        <!-- Node 4: Response -->
+        <div class="node">
+          <div class="node-icon">✅</div>
+          <h4>4. Respons</h4>
+          <p>Callback Asinkron</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Details -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="glass-panel reveal tilt-card">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-cyan);">Arsitektur Redundan</h3>
+            <p>Server kami didistribusikan di berbagai zona ketersediaan untuk memastikan tidak ada titik kegagalan tunggal. Auto-scaling menangani lonjakan lalu lintas dengan mudah.</p>
+          </div>
+        </div>
+        <div class="glass-panel reveal tilt-card" style="transition-delay: 0.1s;">
+          <div class="tilt-card-inner">
+            <h3 style="color: var(--neon-blue);">Enkripsi Ujung-ke-Ujung</h3>
+            <p>Semua payload ditandatangani dan dienkripsi menggunakan kunci RSA 2048-bit dan ditransmisikan melalui TLS 1.3, menjamin keamanan maksimal untuk data keuangan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <img src="assets/logo_best2.png" alt="Best Multi Payment" style="height: 140px; max-width: 100%; object-fit: contain;">
+          </div>
+          <p class="footer-desc">Infrastruktur keuangan generasi baru yang menyediakan solusi H2H, PPOB, dan Payment Gateway.</p>
+        </div>
+        <div>
+          <h4>Solusi</h4>
+          <ul>
+            <li><a href="services.html">Server H2H</a></li>
+            <li><a href="services.html">Payment Gateway</a></li>
+            <li><a href="services.html">Agregator PPOB</a></li>
+            <li><a href="technology.html">Developer API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Perjanjian SLA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Best Multi Payment. Hak cipta dilindungi.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Floating Telegram Widget -->
+  <a href="https://t.me/csbestmp" target="_blank" class="floating-telegram" aria-label="Chat with us on Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+    </svg>
+  </a>
+</body>
+</html>
